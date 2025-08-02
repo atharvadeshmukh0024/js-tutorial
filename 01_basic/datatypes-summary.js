@@ -7,16 +7,16 @@
 
 // Non Primitive (Refrence)
 
-const alphabet =['A','B','C','D','E'];
+// const alphabet =['A','B','C','D','E'];
 
-let myObj ={
-    naav :"atharva",
-    age:22,
-}
+// let myObj ={
+//     naav :"atharva",
+//     age:22,
+// }
 
-const myFun =function(){
-    console.log("hello world");
-}
+// const myFun =function(){
+//     console.log("hello world");
+// }
 
-console.log(typeof myObj)
+// console.log(typeof myObj)
 
