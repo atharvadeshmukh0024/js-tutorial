@@ -27,7 +27,7 @@ const regularUSer ={
 
 // console.log(regularUSer.fullname?.userfullname.firstname); //hitesh
 
-console.log(regularUSer.fullname?.userfullname.firstname);
+//console.log(regularUSer.fullname?.userfullname.firstname);
 
 //? =It safely accesses deeply nested properties without throwing an error if a property along the chain is undefined or null.
 
@@ -37,12 +37,39 @@ const obj2 ={3:"c",4:"d"}
 // const obj3 ={obj1,obj2} { obj1: { '1': 'a', '2': 'b' }, obj2: { '3': 'c', '4': 'd' } }
 
 const obj3 =Object.assign(obj1,obj2) //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
-console.log(obj3)
+//console.log(obj3)
 
 const obj4 =Object.assign({},obj1,obj2) //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 // assign is static method copies enumerable own prioperties from one or more source obj to target obj
-console.log(obj4)
+//console.log(obj4)
 
 const obj5 ={...obj1,...obj2}
 
-console.log(obj5) //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+//console.log(obj5) //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+
+const users =[
+    {
+        id:1,
+        email:"h@gmail.com"
+    },
+    {
+        id:2,
+        gmaiil :"a@gmail.com"
+    },
+    {
+        id:3,
+        gmaiil :"a@gmail.com"
+    }
+
+]
+
+users[1].email
+
+// console.log(user1) //{ id: '1234abc', name: 'Sunny', isLoggedIn: false }
+// console.log(Object.keys(user1)); //[ 'id', 'name', 'isLoggedIn' ]
+// console.log(Object.values(user1));
+//  //[ '1234abc', 'Sunny', false ]
+
+// console.log(Object.entries(user1)) //[ [ 'id', '1234abc' ], [ 'name', 'Sunny' ], [ 'isLoggedIn', false ] ]
+
+// console.log(user1.hasOwnProperty('isLoggedIn')) //true
