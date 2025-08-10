@@ -71,9 +71,9 @@ const myobj ={
     'game2':"spiderman"
 }
 
-for (const [key,value] of myobj) {
-    console.log(key,value)
+// for (const [key,value] of myobj) {
+//     console.log(key,value)
     
-}
+// }
 
 //Error: myobj is not iterable
