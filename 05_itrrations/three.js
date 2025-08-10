@@ -33,7 +33,47 @@ const arr =[1,2,3,4,5]
 // Each char is !
 
 //Maps
-
+// the map object holds two-value pairs and remembers the orignal insertion order of the keys
+//no duplicate values
 const map =new Map()
+map.set('IN',"India")
+map.set('USA',"unites State of America")
+map.set('Fr',"France")
 
+console.log(map);
 
+// Map(3) {
+//   'IN' => 'India',
+//   'USA' => 'unites State of America',
+//   'Fr' => 'France'
+// }
+
+// for (const key of map) {
+//     console.log(key)
+    
+// }
+
+// [ 'IN', 'India' ]
+// [ 'USA', 'unites State of America' ]
+// [ 'Fr', 'France' ]
+
+// for (const [key,value] of map) {
+//     console.log(key,value)
+    
+// }
+
+// IN India
+// USA unites State of America
+// Fr France
+
+const myobj ={
+    'game1':"NFS",
+    'game2':"spiderman"
+}
+
+for (const [key,value] of myobj) {
+    console.log(key,value)
+    
+}
+
+//Error: myobj is not iterable
