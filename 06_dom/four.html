@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLang(langName){
+        const li =document.createElement('li')   // this fun ction help to create li function donot need to call every time it ccreates wli when called
+        li.innerHTML =`${langName}`
+        document.querySelector('.language').appendChild(li)
+
+
+    }
+    addLang("py")
+
+    function addLang1(langName){
+        const li =document.createElement('li')   // this more optimize solution as it dosennot nedd to traverse
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+
+    }
+    addLang("ruby")
+
+    //Edit
+
+    const secondlang =document.querySelector("li:nth-child(2)")
+
+    // secondlang.innerHTML ="Mojo"
+
+    const newLi =document.createElement('li')
+    newLi.textContent = "Mojo"
+    secondlang.replaceWith(newLi)
+
+    //Edit
+
+        const fdlang =document.querySelector("li:first-child")
+        fdlang.outerHTML ='<li>Ts</li>'
+
+    //remove
+        const secondang =document.querySelector("li:nth-child(2)")
+secondlang.remove()
+
+</script>
+
+</html>
