@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atharva Deshmukh</h1>
+    <button id ="stop"> Stop</button>
+    
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Sunny");
+        
+    // },2000);
+    //setTimeout is used to execute the fun once after a certain time period
+
+
+    //Another Way
+
+    const saySunny =function(){
+        console.log("Sunny");
+    }
+
+    const changeText =function(){
+        document.querySelector('h1')
+        innerHTML ="best JS Series"
+    }
+    const chnageMe =setTimeout(changeText,2000)
+
+
+    // how to stop set timeout use cleartimeout
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(chnageMe)
+        console.log("stopped")
+
+    })
+
+
+
+
+</script>
+</html>
