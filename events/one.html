@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick =function(){
+    //     alert('You clicked on the owl image');
+    // } 
+    //attachEvent()
+    //jQuery -on event listner also was used
+    // onclick gives u less features  so use getElement id  amd addEventListner  so add many features 
+
+    //type ,timestamp ,defaultprevented 
+    //target ,toElememt ,srcElement ,currentTarget
+    //clientX ,clientY ,screenX ,screenY
+    //altKey,ctrlkey ,shiftkey ,keyCode
+
+
+//     type → Type of event (e.g., click, keydown).
+
+// timestamp → Time (in ms) when the event was created.
+
+// defaultPrevented → Shows whether event.preventDefault() was called.
+
+// target → The original element where the event occurred.
+
+// toElement → Element the mouse pointer moved into (used in mouseover).
+
+// srcElement → Same as target (mainly in older IE).
+
+// currentTarget → Element whose event handler is currently running.
+
+// clientX / clientY → Mouse position relative to the browser’s viewport.
+
+// screenX / screenY → Mouse position relative to the user’s screen.
+
+// altKey / ctrlKey / shiftKey → true if those keys were pressed during the event.
+
+// keyCode → Numeric code of the key pressed (deprecated, use key instead).
+    // document.getElementById('images').addEventListener('click',function(){
+    //     alert('You clicked on ul image');
+    // },false)
+
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     alert('You clicked on the owl image');
+    //     e.stopPropagation() // only this event will be triggered
+
+    // },false)
+
+    // event propogation :event bubbling : inside to outside (owl get print , ul image)
+    //  , event capturing
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //      e.preventDefault(); 
+    //      e.stopPropagation();
+
+    //     alert('google image');
+
+    // },false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIT =e.target.parentNode
+            removeIT.remove();
+        }
+        
+
+    })
+
+
+</script>
+</html>
